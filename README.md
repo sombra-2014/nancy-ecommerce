@@ -1,6 +1,6 @@
 # Nancy
 
-Aplicaci√≥n Flask lista para desplegar en Render usando Poetry.
+Aplicaci√≥n Flask con base de datos SQLite lista para desplegar en Render.
 
 ## Ì∫Ä C√≥mo ejecutar localmente
 
