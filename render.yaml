@@ -1,8 +1,9 @@
 services:
   - type: web
-    name: nancy
+    name: nancy-app
     env: python
     buildCommand: "poetry install"
-    startCommand: "poetry run gunicorn app:app"
-    pythonVersion: 3.13.4
-    autoDeploy: true
+    startCommand: "gunicorn app:app"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.4
