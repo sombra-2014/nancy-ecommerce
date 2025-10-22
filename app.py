@@ -1,10 +1,12 @@
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
+from flask import Flask, render_template, send_from_directory
+import os
 
-app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///data.db"
-db = SQLAlchemy(app)
+app = Flask(__name__, static_folder="ecommerce_sexshop/frontend", template_folder="ecommerce_sexshop/frontend")
 
 @app.route("/")
-def home():
-    return "¡Hola desde Nancy en Render!"
+def index():
+    return render_template("index.html")
+
+@app.route("/<path:filename>")
+def static_files(filename):
+    return send_from_directory(app.static_folder, filename)
