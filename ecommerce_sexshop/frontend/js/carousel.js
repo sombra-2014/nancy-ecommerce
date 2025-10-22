@@ -23,3 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   fetchCarouselImages(); // ✅ Esto inicia el carrusel correctamente
 });
+
+async function fetchCarouselImages() {
+  const response = await fetch('/api/carousel_images');
+  const images = await response.json();
+  // lógica del carrusel...
+}
