@@ -8,3 +8,10 @@ services:
     rootDir: ecommerce_sexshop
     autoDeploy: true
 
+services:
+  - type: web
+    name: nancy-ecommerce
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    rootDir: ecommerce_sexshop/backend
