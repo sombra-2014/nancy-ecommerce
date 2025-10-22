@@ -29,3 +29,12 @@ async function fetchCarouselImages() {
   const images = await response.json();
   // lógica del carrusel...
 }
+
+
+async function loadCarouselImages() {
+  const response = await fetch('/api/carousel_images');
+  const images = await response.json();
+  const container = document.getElementById('carousel-images');
+  container.innerHTML = images.map(img => `<img src="${img.url}" alt="${img.alt}" class="carousel-image">`).join('');
+}
+loadCarouselImages();

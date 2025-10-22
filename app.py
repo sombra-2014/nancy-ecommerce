@@ -14,7 +14,7 @@ def static_files(filename):
 @app.route("/api/carousel_images")
 def get_carousel_images():
     return jsonify([
-        {"url": "/static/img/banner1.jpg", "alt": "Imagen 1"},
-        {"url": "/static/img/banner2.jpeg", "alt": "Imagen 2"},
-        {"url": "/static/img/banner3.jpeg", "alt": "Imagen 3"}
+        {"url": "/img/banner1.jpg", "alt": "Imagen 1"},
+        {"url": "/img/banner2.jpeg", "alt": "Imagen 2"},
+        {"url": "/img/banner3.jpeg", "alt": "Imagen 3"}
     ])
