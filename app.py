@@ -21,3 +21,12 @@ def get_carousel_images():
         {"url": "/static/img/banner2.jpeg", "alt": "Imagen 2"},
         {"url": "/static/img/banner3.jpeg", "alt": "Imagen 3"}
     ])
+
+
+from flask import Flask, send_from_directory
+
+app = Flask(__name__, static_folder="../frontend", static_url_path="")
+
+@app.route("/")
+def serve_index():
+    return send_from_directory(app.static_folder, "index.html")
