@@ -19,22 +19,45 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // ... resto del código ...
+  function displayImage() {
+    carouselContainer.innerHTML = '';
+    const img = document.createElement('img');
+    img.src = images[currentIndex].url;
+    img.alt = images[currentIndex].alt;
+    img.classList.add('carousel-image');
+    carouselContainer.appendChild(img);
+  }
 
-  fetchCarouselImages(); // ✅ Esto inicia el carrusel correctamente
+  function showNextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    displayImage();
+  }
+
+  function showPrevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    displayImage();
+  }
+
+  function startCarousel() {
+    interval = setInterval(showNextImage, 4000);
+  }
+
+  function stopCarousel() {
+    clearInterval(interval);
+  }
+
+  nextBtn.addEventListener('click', () => {
+    stopCarousel();
+    showNextImage();
+    startCarousel();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    stopCarousel();
+    showPrevImage();
+    startCarousel();
+  });
+
+  fetchCarouselImages();
 });
 
-async function fetchCarouselImages() {
-  const response = await fetch('/api/carousel_images');
-  const images = await response.json();
-  // lógica del carrusel...
-}
-
-
-async function loadCarouselImages() {
-  const response = await fetch('/api/carousel_images');
-  const images = await response.json();
-  const container = document.getElementById('carousel-images');
-  container.innerHTML = images.map(img => `<img src="${img.url}" alt="${img.alt}" class="carousel-image">`).join('');
-}
-loadCarouselImages();
