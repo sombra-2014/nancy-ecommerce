@@ -21,7 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="header-content">
                     <div class="logo-title-container">
                         <h1 class="logo-title">
+<<<<<<< HEAD
                             <i class="fas fa-heart"></i>El suspiro del Deseo... <i class="fas fa-heart"></i>
+=======
+                            <i class="fas fa-heart"></i> Suspiro del Deseo <i class="fas fa-heart"></i>
+>>>>>>> 0efb8d95120bae3838f47150d42660585a8dc3d1
                         </h1>
                     </div>
                     

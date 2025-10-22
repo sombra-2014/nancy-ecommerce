@@ -41,7 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
                             </p>
                             ${product.stock > 0 ? `
                                 <button class="add-to-cart-btn" data-product-id="${product.id}">Agregar al Carrito</button>
+<<<<<<< HEAD
                                 <a href="https://wa.me/5491161141506?text=Hola! Me interesa el producto ${product.name}." class="whatsapp-btn" target="_blank">Consultar por WhatsApp</a>
+=======
+                                <a href="https://wa.me/5491112345678?text=Hola! Me interesa el producto ${product.name}." class="whatsapp-btn" target="_blank">Consultar por WhatsApp</a>
+>>>>>>> 0efb8d95120bae3838f47150d42660585a8dc3d1
                             ` : ''}
                         </div>
                     </div>

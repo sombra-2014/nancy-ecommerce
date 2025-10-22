@@ -55,7 +55,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 `http://127.0.0.1:5000${product.image_urls[0]}` :
                 './uploads/placeholder.png';
 
+<<<<<<< HEAD
             const phoneNumber = '5491161141506';
+=======
+            const phoneNumber = '5491112345678';
+>>>>>>> 0efb8d95120bae3838f47150d42660585a8dc3d1
             const message = encodeURIComponent(`¡Hola! Estoy interesado en el producto "${product.name}". ¿Podrías darme más información?`);
             const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
 

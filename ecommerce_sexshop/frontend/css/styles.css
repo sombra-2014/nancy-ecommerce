@@ -64,7 +64,11 @@ header {
 .logo-title {
     margin: 0;
     font-size: 2.2em; /* Tamaño del título */
+<<<<<<< HEAD
     font-family: 'Parisienne', cursive;
+=======
+    font-weight: bold;
+>>>>>>> 0efb8d95120bae3838f47150d42660585a8dc3d1
     color: #fcfcfc;
 }
 
@@ -688,19 +692,33 @@ form button:hover {
         text-align: left;
     }
 }
+<<<<<<< HEAD
 /* --- Estilos del Footer --- */
+=======
+
+>>>>>>> 0efb8d95120bae3838f47150d42660585a8dc3d1
 /* --- Estilos del Footer --- */
 footer {
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
     align-items: flex-start; /* Alinea todo el contenido a la izquierda */
     gap: 5px; /* Las palabras se acercan con este valor */
     padding: 5px 20px; /* La franja se acorta con este valor */
+=======
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+>>>>>>> 0efb8d95120bae3838f47150d42660585a8dc3d1
     background-color: #ff69b4;
     color: white;
     margin-top: 20px;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+<<<<<<< HEAD
     text-align: left;
+=======
+    text-align: center;
+>>>>>>> 0efb8d95120bae3838f47150d42660585a8dc3d1
 }
 
 footer p, footer a {
@@ -712,8 +730,13 @@ footer p, footer a {
 .footer-contact {
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
     align-items: flex-start; /* Alinea los ítems de contacto a la izquierda */
     gap: 10px; /* Acorta el espacio entre el correo y el número */
+=======
+    align-items: center;
+    gap: 8px;
+>>>>>>> 0efb8d95120bae3838f47150d42660585a8dc3d1
 }
 
 .contact-title {
@@ -743,6 +766,7 @@ footer p, footer a {
 
 .footer-nav a {
     font-weight: 600;
+<<<<<<< HEAD
 }
 
 
@@ -835,3 +859,6 @@ nav ul li a:hover {
     max-width: 100%;
     height: auto; /* Mantener la proporción automáticamente */
   }
+=======
+}
+>>>>>>> 0efb8d95120bae3838f47150d42660585a8dc3d1
