@@ -19,39 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  function displayImage() {
-    carouselContainer.innerHTML = '';
-    const img = document.createElement('img');
-    img.src = images[currentIndex].url;
-    img.alt = images[currentIndex].alt || `Imagen ${currentIndex + 1}`;
-    img.classList.add('carousel-image');
-    carouselContainer.appendChild(img);
-  }
+  // ... resto del código ...
 
-  function startCarousel() {
-    interval = setInterval(() => {
-      currentIndex = (currentIndex + 1) % images.length;
-      displayImage();
-    }, 3000);
-  }
-
-  function stopCarousel() {
-    clearInterval(interval);
-  }
-
-  prevBtn.addEventListener('click', () => {
-    stopCarousel();
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    displayImage();
-    startCarousel();
-  });
-
-  nextBtn.addEventListener('click', () => {
-    stopCarousel();
-    currentIndex = (currentIndex + 1) % images.length;
-    displayImage();
-    startCarousel();
-  });
-
-  fetchCarouselImages();
+  fetchCarouselImages(); // ✅ Esto inicia el carrusel correctamente
 });
