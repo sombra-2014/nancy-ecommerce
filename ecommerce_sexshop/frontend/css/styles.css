@@ -923,3 +923,30 @@ body {
   height: auto;
   object-fit: cover;
 }
+
+@media (max-width: 768px) {
+  .category-bar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .carousel-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #product-container {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .carousel-image {
+    width: 100%;
+    height: auto;
+  }
+}
