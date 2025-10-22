@@ -1,9 +1,10 @@
 services:
   - type: web
-    name: nancy-app
-    env: python
-    buildCommand: "poetry install"
-    startCommand: "gunicorn app:app"
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.13.4
+    name: nancy-ecommerce
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    rootDir: ecommerce_sexshop
+    autoDeploy: true
+
