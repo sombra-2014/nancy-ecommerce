@@ -1,16 +1,6 @@
 services:
   - type: web
     name: nancy-ecommerce
-    env: node
-    plan: free
-    buildCommand: npm install
-    startCommand: npm start
-    rootDir: ecommerce_sexshop
-    autoDeploy: true
-
-services:
-  - type: web
-    name: nancy-ecommerce
     env: python
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app
