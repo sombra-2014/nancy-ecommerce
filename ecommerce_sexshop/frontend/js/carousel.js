@@ -8,12 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function fetchCarouselImages() {
         try {
-            const response = await fetch('http://127.0.0.1:5000/api/carousel_images');
+            // Usar ruta relativa para que funcione en Render
+            const response = await fetch('/api/carousel_images');
             images = await response.json();
             if (images.length > 0) {
-                // Muestra la primera imagen al cargar
                 displayImage();
-                // Inicia el carrusel
                 startCarousel();
             }
         } catch (error) {
@@ -24,9 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function displayImage() {
         carouselContainer.innerHTML = '';
         const img = document.createElement('img');
-        // Asegura que la URL de la imagen sea absoluta
-        img.src = `http://127.0.0.1:5000${images[currentIndex].url}`;
-        img.alt = images[currentIndex].alt;
+        img.src = images[currentIndex].url; // Usar URL relativa
+        img.alt = images[currentIndex].alt || `Imagen ${currentIndex + 1}`;
+        img.classList.add('carousel-image');
         carouselContainer.appendChild(img);
     }
 
@@ -34,14 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
         interval = setInterval(() => {
             currentIndex = (currentIndex + 1) % images.length;
             displayImage();
-        }, 3000); // Cambia de imagen cada 3 segundos
+        }, 3000);
     }
 
     function stopCarousel() {
         clearInterval(interval);
     }
 
-    // Navegación manual
     prevBtn.addEventListener('click', () => {
         stopCarousel();
         currentIndex = (currentIndex - 1 + images.length) % images.length;
